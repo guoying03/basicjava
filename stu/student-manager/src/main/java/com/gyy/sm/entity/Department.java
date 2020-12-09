@@ -1,9 +1,6 @@
 package com.gyy.sm.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * @ClassName Department
@@ -15,9 +12,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Department {
+@Setter
+@Getter
+public class Department  {
     private Integer id;
     private String departmentName;
     private String logo;
+
+    @Override
+//    @Builder(toBuilder = true)
+    public String toString() {
+        return this.departmentName;
+    }
 
 }

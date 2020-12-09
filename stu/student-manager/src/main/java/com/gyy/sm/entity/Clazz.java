@@ -1,6 +1,9 @@
 package com.gyy.sm.entity;
 
 import com.sun.org.apache.bcel.internal.generic.RET;
+import lombok.*;
+
+import javax.jws.soap.SOAPMessageHandler;
 
 /**
  * @ClassName Clazz
@@ -8,10 +11,19 @@ import com.sun.org.apache.bcel.internal.generic.RET;
  * @Author GYY
  * @Date 2020/11/23
  **/
+@Getter
+@Setter
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Clazz {
+
     private Integer id;
     private Integer departmentId;
     private String className;
+
+
     public Integer getId() {
         return id;
     }

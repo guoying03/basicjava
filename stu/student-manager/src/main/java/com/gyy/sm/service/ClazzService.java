@@ -28,5 +28,12 @@ public interface ClazzService {
 
     int addClazz(Clazz clazz);
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     int deleteClazz(Integer id);
+
+    List<Clazz> selectAll();
 }

@@ -32,6 +32,21 @@ public interface ClazzDao {
      */
     int insertClazz(Clazz clazz) throws SQLException;
 
+    /**
+     * 删除班级
+     * @param id
+     * @return
+     * @throws SQLException
+     */
     int deleteClazz(Integer id) throws SQLException;
+
+    /**
+     * 查询所有班级
+     *
+     * @return List<Clazz>
+     * @throws SQLException 异常
+     */
+    List<Clazz> selectAll() throws SQLException;
+
 }
 

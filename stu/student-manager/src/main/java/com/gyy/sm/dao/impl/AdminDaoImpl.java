@@ -17,11 +17,10 @@ import java.sql.SQLException;
  **/
 public class AdminDaoImpl implements AdminDao {
     @Override
-
     public Admin findAdminByAccount(String account) throws SQLException {
         JdbcUtil jdbcUtil = JdbcUtil.getInitJdbcUtil();
         Connection connection = jdbcUtil.getConnection();
-        String sql = "SELECT * FROM t_admin WHERE account =?";
+        String sql = "SELECT * FROM t_admin WHERE account = ?";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setString(1, account);
         ResultSet rs = pstmt.executeQuery();
